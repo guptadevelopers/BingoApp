@@ -76,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E2419372409639F004A84C7 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				9EFE457F2407B6F900CE975E /* Main.storyboard */,
+				9EFE45842407B6FA00CE975E /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
 		9EFE456D2407B6F900CE975E = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +108,11 @@
 		9EFE45782407B6F900CE975E /* BingoApp */ = {
 			isa = PBXGroup;
 			children = (
+				9E2419372409639F004A84C7 /* StoryBoard */,
 				9EFE45792407B6F900CE975E /* AppDelegate.swift */,
 				9EFE457B2407B6F900CE975E /* SceneDelegate.swift */,
 				9EFE457D2407B6F900CE975E /* ViewController.swift */,
-				9EFE457F2407B6F900CE975E /* Main.storyboard */,
 				9EFE45822407B6FA00CE975E /* Assets.xcassets */,
-				9EFE45842407B6FA00CE975E /* LaunchScreen.storyboard */,
 				9EFE45872407B6FA00CE975E /* Info.plist */,
 			);
 			path = BingoApp;
