@@ -7,20 +7,20 @@
 //
 
 import UIKit
+import GoogleSignIn
 
+//Step 1 Add GIDSignInDelegate
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
 
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
-    }
-
+    // [END appdelegate_interfaces]
+     var window: UIWindow?
+    
     // MARK: UISceneSession Lifecycle
 
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration
+    {
+        
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
@@ -31,7 +31,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
+    
+    //Adding methods for the google signIn...
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+          
+          //Step 2 Add SigInKeys
+          // Initialize sign-in
+          GIDSignIn.sharedInstance().clientID = "462670869345-pm46la4a2s5tc5sk72v6m2jpmuh95im4.apps.googleusercontent.com"
+          GIDSignIn.sharedInstance().delegate = self
+          
+          // Override point for customization after application launch.
+          return true
+      }
+   
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url)
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+       return GIDSignIn.sharedInstance().handle(url)
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+        if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+          print("The user has not signed in before or they have since signed out.")
+        } else {
+          print("\(error.localizedDescription)")
+        }
+        return
+      }
+      // Perform any operations on signed in user here.
+      let userId = user.userID                  // For client-side use only!
+      let idToken = user.authentication.idToken // Safe to send to the server
+      let fullName = user.profile.name
+      let givenName = user.profile.givenName
+      let familyName = user.profile.familyName
+      let email = user.profile.email
+      // ...
+   }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+         // Perform any operations when the user disconnects from app here.
+        // ...
+    }
+    
 
 }
 

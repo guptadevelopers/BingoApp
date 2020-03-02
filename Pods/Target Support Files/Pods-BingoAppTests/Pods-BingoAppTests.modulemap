@@ -1,0 +1,6 @@
+framework module Pods_BingoAppTests {
+  umbrella header "Pods-BingoAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
