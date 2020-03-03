@@ -10,33 +10,11 @@ import UIKit
 import GoogleSignIn
 
 class LogInViewController: UIViewController , GIDSignInDelegate {
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let error = error {
-            print("We have error in sign in user == \(error.localizedDescription)")
-        }
-        else
-        {
-            if let gmailUser = user
-            {
-                lblTitle.text = "You are sign in with id \(String(describing: gmailUser.profile.email))"
-                signInButton.setTitle("Sign Out", for:.normal)
-             //print("Name \(gmailUser.profile.name)"+"\nEmail \(gmailUser.profile.email)"+"\nImage \(gmailUser.profile.imageURL(withDimension: 400))")
-                openDashboard()
-            }
-            else
-            {
-                lblTitle.text = "Output-"
-                signInButton.setTitle("Sign Up With Gmail", for:.normal)
-            }
-        }
-    }
-
-    @IBAction func btnLoginClick(_ sender: Any) {
-       openDashboard()
-    }
+  
     
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var signInButton: UIButton!
+   // var userName :String = "HIIIIIII"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,11 +42,43 @@ class LogInViewController: UIViewController , GIDSignInDelegate {
         }
     }
     
-    func openDashboard()
+    func openDashboard(name : String )
     {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "MapViewControllerID")as! MapViewController
+        vc.UserName = name
         present(vc, animated: true, completion: nil)
     }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+          if let error = error {
+              print("We have error in sign in user == \(error.localizedDescription)")
+          }
+          else
+          {
+              if let gmailUser = user
+              {
+                  lblTitle.text = "You are sign in with id \(String(describing: gmailUser.profile.email))"
+                  signInButton.setTitle("Sign Out", for:.normal)
+                let nameVal = gmailUser.profile.name!
+               //print("Name \(gmailUser.profile.name)"+"\nEmail \(gmailUser.profile.email)"+"\nImage \(gmailUser.profile.imageURL(withDimension: 400))")
+                openDashboard(name: nameVal)
+              }
+              else
+              {
+                  lblTitle.text = "Output-"
+                  signInButton.setTitle("Sign Up With Gmail", for:.normal)
+              }
+          }
+      }
+
+      @IBAction func btnLoginClick(_ sender: Any) {
+        openDashboard(name: "Direct Login ")
+      }
+      
+//      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        var vcc = segue.destination as!MapViewController
+//        vcc.UserName = self.userName
+//      }
 }
 
 

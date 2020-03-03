@@ -10,6 +10,8 @@ import UIKit
 import GoogleMaps
 
 class MapViewController: UIViewController {
+    
+    var UserName :String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,8 @@ class MapViewController: UIViewController {
            marker.title = "Sydney"
            marker.snippet = "Australia"
            marker.map = mapView
+        
+        print(UserName)
     }
     
 
