@@ -17,6 +17,8 @@ target 'BingoApp' do
   end
 
 pod 'GoogleSignIn'
+pod 'GoogleMaps'
+pod 'GooglePlaces'
 
 
 end

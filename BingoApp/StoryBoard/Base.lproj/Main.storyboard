@@ -10,7 +10,7 @@
         <!--Log In Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Log In Controller" customClass="ViewController" customModule="BingoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Log In Controller" customClass="LogInViewController" customModule="BingoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,6 +50,9 @@
                                                 <state key="normal" title="Log In">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btnLoginClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qK5-IZ-yck"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8I0-7x-gkW">
                                                 <rect key="frame" x="0.0" y="65" width="334" height="14.5"/>
@@ -160,7 +163,7 @@
         <!--Forget Pass Controller-->
         <scene sceneID="aXZ-zy-dyD">
             <objects>
-                <viewController id="DO2-0h-lJ7" userLabel="Forget Pass Controller" customClass="ViewController" customModule="BingoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DO2-0h-lJ7" userLabel="Forget Pass Controller" customClass="ForgotPassViewController" customModule="BingoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mWn-Bb-anF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -257,12 +260,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IGl-Cs-NyF" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="197" y="136"/>
+            <point key="canvasLocation" x="-1114" y="830"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="ZUI-Y8-A4F">
+            <objects>
+                <viewController storyboardIdentifier="MapViewControllerID" id="I7n-mT-XMN" customClass="MapViewController" customModule="BingoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Z6-AT-KhQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3G-v5-p6s">
+                                <rect key="frame" x="0.0" y="44" width="81" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrow.left" catalog="system"/>
+                                <connections>
+                                    <action selector="backAction:" destination="I7n-mT-XMN" eventType="touchUpInside" id="vP1-bS-kbF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="WJd-q5-h92"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WNZ-tE-10L"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ayb-kX-Cvt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-339.13043478260875" y="135.9375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zp6-7m-8Kh">
+            <objects>
+                <navigationController id="J8s-Wq-BQV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lHD-6U-WBM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3NE-PU-NOr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-338" y="-554"/>
         </scene>
         <!--Sign Up Controller-->
         <scene sceneID="Gfa-oC-k4c">
             <objects>
-                <viewController id="bcn-wI-9zQ" userLabel="Sign Up Controller" customClass="ViewController" customModule="BingoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bcn-wI-9zQ" userLabel="Sign Up Controller" customClass="SignUpViewController" customModule="BingoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aqw-yq-pT4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -400,10 +443,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5V-Xy-HVQ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-461" y="136"/>
+            <point key="canvasLocation" x="-1114" y="-554"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.left" catalog="system" width="64" height="48"/>
         <image name="top_banner" width="860" height="698"/>
     </resources>
 </document>

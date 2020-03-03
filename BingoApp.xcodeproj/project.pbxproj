@@ -10,10 +10,13 @@
 		2E5FE31C7AFAE43DEB95C4E9 /* Pods_BingoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A6353EFFDD25BE5B3FE7C6E /* Pods_BingoApp.framework */; };
 		3174E37A228C0C12A27C6BBE /* Pods_BingoApp_BingoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF0D60623D7A8A8D2A79501 /* Pods_BingoApp_BingoAppUITests.framework */; };
 		3F331C81B911EF674D97F975 /* Pods_BingoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB4FB2B5B36856320300D47 /* Pods_BingoAppTests.framework */; };
+		9E23F920240E69F00053E317 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23F91F240E69F00053E317 /* SignUpViewController.swift */; };
+		9E23F923240E6C8A0053E317 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23F922240E6C8A0053E317 /* ForgotPassViewController.swift */; };
+		9E23F925240E6CCA0053E317 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23F924240E6CCA0053E317 /* MapViewController.swift */; };
 		9E26733F240D0F5E0076DC98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E26733E240D0F5E0076DC98 /* GoogleService-Info.plist */; };
 		9EFE457A2407B6F900CE975E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFE45792407B6F900CE975E /* AppDelegate.swift */; };
 		9EFE457C2407B6F900CE975E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFE457B2407B6F900CE975E /* SceneDelegate.swift */; };
-		9EFE457E2407B6F900CE975E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFE457D2407B6F900CE975E /* ViewController.swift */; };
+		9EFE457E2407B6F900CE975E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFE457D2407B6F900CE975E /* LogInViewController.swift */; };
 		9EFE45812407B6F900CE975E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFE457F2407B6F900CE975E /* Main.storyboard */; };
 		9EFE45832407B6FA00CE975E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EFE45822407B6FA00CE975E /* Assets.xcassets */; };
 		9EFE45862407B6FA00CE975E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFE45842407B6FA00CE975E /* LaunchScreen.storyboard */; };
@@ -46,11 +49,14 @@
 		697B5888CBFDD7C5DCCC98F5 /* Pods-BingoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BingoApp.release.xcconfig"; path = "Target Support Files/Pods-BingoApp/Pods-BingoApp.release.xcconfig"; sourceTree = "<group>"; };
 		8299495418CDF83304F4957F /* Pods-BingoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BingoAppTests.release.xcconfig"; path = "Target Support Files/Pods-BingoAppTests/Pods-BingoAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		9A6353EFFDD25BE5B3FE7C6E /* Pods_BingoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BingoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E23F91F240E69F00053E317 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		9E23F922240E6C8A0053E317 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
+		9E23F924240E6CCA0053E317 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9E26733E240D0F5E0076DC98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9EFE45762407B6F900CE975E /* BingoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BingoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EFE45792407B6F900CE975E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EFE457B2407B6F900CE975E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9EFE457D2407B6F900CE975E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9EFE457D2407B6F900CE975E /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		9EFE45802407B6F900CE975E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9EFE45822407B6FA00CE975E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EFE45852407B6FA00CE975E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -116,6 +122,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9E23F921240E69FB0053E317 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E23F91F240E69F00053E317 /* SignUpViewController.swift */,
+				9EFE457D2407B6F900CE975E /* LogInViewController.swift */,
+				9E23F922240E6C8A0053E317 /* ForgotPassViewController.swift */,
+				9E23F924240E6CCA0053E317 /* MapViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		9E2419372409639F004A84C7 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,10 +167,10 @@
 		9EFE45782407B6F900CE975E /* BingoApp */ = {
 			isa = PBXGroup;
 			children = (
+				9E23F921240E69FB0053E317 /* ViewControllers */,
 				9E2419372409639F004A84C7 /* StoryBoard */,
 				9EFE45792407B6F900CE975E /* AppDelegate.swift */,
 				9EFE457B2407B6F900CE975E /* SceneDelegate.swift */,
-				9EFE457D2407B6F900CE975E /* ViewController.swift */,
 				9EFE45822407B6FA00CE975E /* Assets.xcassets */,
 				9EFE45872407B6FA00CE975E /* Info.plist */,
 				9E26733E240D0F5E0076DC98 /* GoogleService-Info.plist */,
@@ -455,8 +472,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EFE457E2407B6F900CE975E /* ViewController.swift in Sources */,
+				9E23F923240E6C8A0053E317 /* ForgotPassViewController.swift in Sources */,
+				9E23F925240E6CCA0053E317 /* MapViewController.swift in Sources */,
+				9EFE457E2407B6F900CE975E /* LogInViewController.swift in Sources */,
 				9EFE457A2407B6F900CE975E /* AppDelegate.swift in Sources */,
+				9E23F920240E69F00053E317 /* SignUpViewController.swift in Sources */,
 				9EFE457C2407B6F900CE975E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

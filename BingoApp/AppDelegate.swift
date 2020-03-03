@@ -8,6 +8,8 @@
 
 import UIKit
 import GoogleSignIn
+//import GoogleMaps
+//import GooglePlaces
 
 //Step 1 Add GIDSignInDelegate
 @UIApplicationMain
@@ -39,6 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
           // Initialize sign-in
           GIDSignIn.sharedInstance().clientID = "462670869345-pm46la4a2s5tc5sk72v6m2jpmuh95im4.apps.googleusercontent.com"
           GIDSignIn.sharedInstance().delegate = self
+        
+//        GMSServices.provideAPIKey("AIzaSyB1KGUP3r_i1ET2UymtrrAOnRNKbeSrJ-A")
+//        GMSPlacesClient.provideAPIKey("AIzaSyB1KGUP3r_i1ET2UymtrrAOnRNKbeSrJ-A")
+
           
           // Override point for customization after application launch.
           return true
